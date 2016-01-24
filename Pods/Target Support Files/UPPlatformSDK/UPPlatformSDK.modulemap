@@ -1,0 +1,6 @@
+framework module UPPlatformSDK {
+  umbrella header "UPPlatformSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

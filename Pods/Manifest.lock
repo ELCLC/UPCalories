@@ -1,0 +1,10 @@
+PODS:
+  - UPPlatformSDK (1.1.5)
+
+DEPENDENCIES:
+  - UPPlatformSDK
+
+SPEC CHECKSUMS:
+  UPPlatformSDK: e28466edbb6bfbf9bb8a1d34512edc4db14b818c
+
+COCOAPODS: 0.39.0
