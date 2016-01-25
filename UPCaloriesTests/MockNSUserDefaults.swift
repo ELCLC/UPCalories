@@ -10,16 +10,18 @@ import UIKit
 
 class MockNSUserDefaults: NSUserDefaults {
     private var userToken: AnyObject? = nil
-    var wasCalled: Bool = false
+    var wasObjectForKeyCalled: Bool = false
+    var wasSetObjectCalled: Bool = false
     
     override func setObject(value: AnyObject?, forKey defaultName: String) {
+        wasSetObjectCalled = true
         if defaultName == "UPCalories_userToken" {
             userToken = value
         }
     }
     
     override func objectForKey(defaultName: String) -> AnyObject? {
-        wasCalled = true
+        wasObjectForKeyCalled = true
         if defaultName == "UPCalories_userToken" {
             return userToken
         }

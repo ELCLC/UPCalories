@@ -16,7 +16,7 @@ class UserTokenTests: XCTestCase {
     override func setUp() {
         super.setUp()
         mockUserDefaults = MockNSUserDefaults(suiteName: "testing")!
-        userToken = UserToken.init(defaults: mockUserDefaults)
+        userToken = UserToken.init(withUserDefaults: mockUserDefaults)
     }
     
     func testEmptyUserToken() {
@@ -31,7 +31,12 @@ class UserTokenTests: XCTestCase {
     func testCheckUserDefaultForToken() {
         addTestUserToken()
         getUserToken()
-        XCTAssertTrue(mockUserDefaults.wasCalled)
+        XCTAssertTrue(mockUserDefaults.wasObjectForKeyCalled)
+    }
+    
+    func testAddUserTokenAddsToUserDefaults() {
+        userToken.addUserToken("TestUserToken")
+        XCTAssertTrue(mockUserDefaults.wasSetObjectCalled)
     }
     
     private func addTestUserToken() {

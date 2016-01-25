@@ -7,19 +7,24 @@
 //
 
 import UIKit
+import UPPlatformSDK
 
 class ViewController: UIViewController {
+    
+    var api: Api?
+    var userToken: UserToken?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewDidAppear(animated: Bool) {
+        
+        if let api = self.api {
+            api.startSessionWith { (session, error) -> () in
+                if error == nil {
+                    if let userToken = self.userToken {
+                        userToken.addUserToken(session.authenticationToken)
+                    }
+                }
+            }
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

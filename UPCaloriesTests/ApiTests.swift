@@ -7,28 +7,29 @@
 //
 
 import XCTest
+import UPPlatformSDK
+@testable import UPCalories
 
 class ApiTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testStartSessionCall() {
+        let mockSession = UPSession.init(token: "TestUserToken")
+        let mockError = NSError(domain: "Test", code: -1, userInfo: nil)
+        let mockPlatform = MockPlatform(session: mockSession, error: mockError)
+        let api = Api(withPlatform: mockPlatform)
+        api.startSessionWith { (session, error) -> () in
+        }
+        XCTAssertTrue(mockPlatform.didCallStartSession)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+    func testStartSessionResponse() {
+        let mockSession = UPSession.init(token: "TestUserToken")
+        let mockError = NSError(domain: "Test", code: -1, userInfo: nil)
+        let mockPlatform = MockPlatform(session: mockSession, error: mockError)
+        let api = Api(withPlatform: mockPlatform)
+        api.startSessionWith { (session, error) -> () in
+            XCTAssertEqual(session, mockSession)
+            XCTAssertEqual(error, mockError)
         }
     }
     

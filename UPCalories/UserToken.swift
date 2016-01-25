@@ -8,18 +8,24 @@
 
 import UIKit
 
+@objc
 class UserToken: NSObject {
+    let userTokenDefaultsKey = "UPCalories_userToken"
     var userDefaults: NSUserDefaults? = nil
     
-    init(defaults: NSUserDefaults) {
+    init(withUserDefaults defaults: NSUserDefaults) {
         userDefaults = defaults
     }
     
     func getUserToken() -> String {
-        let userToken: String? = userDefaults!.objectForKey("UPCalories_userToken") as? String
+        let userToken: String? = userDefaults!.objectForKey(userTokenDefaultsKey) as? String
         if let token = userToken {
             return token
         }
         return ""
+    }
+    
+    func addUserToken(token: String) {
+        userDefaults?.setObject(token, forKey: userTokenDefaultsKey)
     }
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		641C160B1C552CC500C45751 /* MockNSUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641C160A1C552CC500C45751 /* MockNSUserDefaults.swift */; };
-		641C160D1C55380300C45751 /* UserSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641C160C1C55380300C45751 /* UserSessionTests.swift */; };
+		6420C9CA1C5696A600330060 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6420C9C91C5696A600330060 /* ViewControllerTests.swift */; };
 		642DB9F51C55295D006C77B9 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DB9F41C55295D006C77B9 /* UserToken.swift */; };
 		642EFC431C551947000E3BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642EFC421C551947000E3BD6 /* AppDelegate.swift */; };
 		642EFC451C551947000E3BD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642EFC441C551947000E3BD6 /* ViewController.swift */; };
@@ -17,6 +17,10 @@
 		642EFC4D1C551947000E3BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642EFC4B1C551947000E3BD6 /* LaunchScreen.storyboard */; };
 		642EFC581C551947000E3BD6 /* UserTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642EFC571C551947000E3BD6 /* UserTokenTests.swift */; };
 		642EFC631C551947000E3BD6 /* UPCaloriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642EFC621C551947000E3BD6 /* UPCaloriesUITests.swift */; };
+		644D07231C557F97008CDFE0 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644D07221C557F97008CDFE0 /* Api.swift */; };
+		644D07251C55834E008CDFE0 /* MockPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644D07241C55834E008CDFE0 /* MockPlatform.swift */; };
+		64C2D4B31C5692A3009B6E76 /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C2D4B21C5692A3009B6E76 /* ApiTests.swift */; };
+		64C2D4B51C569326009B6E76 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C2D4B41C569326009B6E76 /* AppDelegateTests.swift */; };
 		F5A94CD3C898913817BF5323 /* Pods_UPCalories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40063E3C3DD9579C3F0941E /* Pods_UPCalories.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		641C160A1C552CC500C45751 /* MockNSUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNSUserDefaults.swift; sourceTree = "<group>"; };
-		641C160C1C55380300C45751 /* UserSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionTests.swift; sourceTree = "<group>"; };
+		6420C9C91C5696A600330060 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		642DB9F41C55295D006C77B9 /* UserToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
 		642EFC3F1C551947000E3BD6 /* UPCalories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UPCalories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		642EFC421C551947000E3BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,10 @@
 		642EFC5E1C551947000E3BD6 /* UPCaloriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UPCaloriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		642EFC621C551947000E3BD6 /* UPCaloriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCaloriesUITests.swift; sourceTree = "<group>"; };
 		642EFC641C551947000E3BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		644D07221C557F97008CDFE0 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		644D07241C55834E008CDFE0 /* MockPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPlatform.swift; sourceTree = "<group>"; };
+		64C2D4B21C5692A3009B6E76 /* ApiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
+		64C2D4B41C569326009B6E76 /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		77EEC4009D943B342E6C379E /* Pods-UPCalories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPCalories.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UPCalories/Pods-UPCalories.debug.xcconfig"; sourceTree = "<group>"; };
 		BB9500098AEB3B809C74B435 /* Pods-UPCalories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPCalories.release.xcconfig"; path = "Pods/Target Support Files/Pods-UPCalories/Pods-UPCalories.release.xcconfig"; sourceTree = "<group>"; };
 		F40063E3C3DD9579C3F0941E /* Pods_UPCalories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPCalories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,11 +128,12 @@
 			children = (
 				642EFC421C551947000E3BD6 /* AppDelegate.swift */,
 				642EFC441C551947000E3BD6 /* ViewController.swift */,
+				642DB9F41C55295D006C77B9 /* UserToken.swift */,
+				644D07221C557F97008CDFE0 /* Api.swift */,
 				642EFC461C551947000E3BD6 /* Main.storyboard */,
 				642EFC491C551947000E3BD6 /* Assets.xcassets */,
 				642EFC4B1C551947000E3BD6 /* LaunchScreen.storyboard */,
 				642EFC4E1C551947000E3BD6 /* Info.plist */,
-				642DB9F41C55295D006C77B9 /* UserToken.swift */,
 			);
 			path = UPCalories;
 			sourceTree = "<group>";
@@ -132,10 +141,13 @@
 		642EFC561C551947000E3BD6 /* UPCaloriesTests */ = {
 			isa = PBXGroup;
 			children = (
+				64C2D4B41C569326009B6E76 /* AppDelegateTests.swift */,
+				6420C9C91C5696A600330060 /* ViewControllerTests.swift */,
 				642EFC571C551947000E3BD6 /* UserTokenTests.swift */,
-				641C160C1C55380300C45751 /* UserSessionTests.swift */,
-				642EFC591C551947000E3BD6 /* Info.plist */,
+				64C2D4B21C5692A3009B6E76 /* ApiTests.swift */,
 				641C160A1C552CC500C45751 /* MockNSUserDefaults.swift */,
+				644D07241C55834E008CDFE0 /* MockPlatform.swift */,
+				642EFC591C551947000E3BD6 /* Info.plist */,
 			);
 			path = UPCaloriesTests;
 			sourceTree = "<group>";
@@ -342,6 +354,7 @@
 			files = (
 				642EFC451C551947000E3BD6 /* ViewController.swift in Sources */,
 				642DB9F51C55295D006C77B9 /* UserToken.swift in Sources */,
+				644D07231C557F97008CDFE0 /* Api.swift in Sources */,
 				642EFC431C551947000E3BD6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,9 +363,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6420C9CA1C5696A600330060 /* ViewControllerTests.swift in Sources */,
+				644D07251C55834E008CDFE0 /* MockPlatform.swift in Sources */,
+				64C2D4B51C569326009B6E76 /* AppDelegateTests.swift in Sources */,
 				642EFC581C551947000E3BD6 /* UserTokenTests.swift in Sources */,
 				641C160B1C552CC500C45751 /* MockNSUserDefaults.swift in Sources */,
-				641C160D1C55380300C45751 /* UserSessionTests.swift in Sources */,
+				64C2D4B31C5692A3009B6E76 /* ApiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

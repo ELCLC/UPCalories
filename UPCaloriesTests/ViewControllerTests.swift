@@ -7,6 +7,18 @@
 //
 
 import XCTest
+import UPPlatformSDK
+@testable import UPCalories
+
+private class MockUserToken: UserToken {
+    
+    var didCallAddUserToken: Bool = false
+    
+    override private func addUserToken(token: String) {
+        didCallAddUserToken = true
+    }
+    
+}
 
 class ViewControllerTests: XCTestCase {
     
@@ -20,16 +32,40 @@ class ViewControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testViewDidAppearCallsApiStartSession() {
+        let mockSession = UPSession.init(token: "TestUserToken")
+        let mockPlatform = MockPlatform(session: mockSession, error: nil)
+        let api = Api.init(withPlatform:mockPlatform)
+        let mockUserToken = MockUserToken(withUserDefaults: MockNSUserDefaults(suiteName: "Testing")!)
+        let viewController = ViewController()
+        viewController.api = api
+        viewController.userToken = mockUserToken
+        viewController.viewDidAppear(true)
+        XCTAssertTrue(mockPlatform.didCallStartSession)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testViewDidAppearStartSessionWithSuccessfulResponseAddsUserToken() {
+        let mockSession = UPSession.init(token: "TestUserToken")
+        let mockPlatform = MockPlatform(session: mockSession, error: nil)
+        let api = Api.init(withPlatform:mockPlatform)
+        let mockUserToken = MockUserToken(withUserDefaults: MockNSUserDefaults(suiteName: "Testing")!)
+        let viewController = ViewController()
+        viewController.api = api
+        viewController.userToken = mockUserToken
+        viewController.viewDidAppear(true)
+        XCTAssertTrue(mockUserToken.didCallAddUserToken)
     }
-    
+
+    func testViewDidAppearStartSessionWithErrorResponse() {
+        let mockSession = UPSession.init(token: "")
+        let mockError = NSError(domain: "Test", code: -1, userInfo: nil)
+        let mockPlatform = MockPlatform(session: mockSession, error: mockError)
+        let api = Api.init(withPlatform:mockPlatform)
+        let mockUserToken = MockUserToken(withUserDefaults: MockNSUserDefaults(suiteName: "Testing")!)
+        let viewController = ViewController()
+        viewController.api = api
+        viewController.userToken = mockUserToken
+        viewController.viewDidAppear(true)
+        XCTAssertFalse(mockUserToken.didCallAddUserToken)
+    }
 }
